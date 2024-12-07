@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
+    ports:
+      - "8000:8000"
+    depends_on:
+      - tensorflow_serving
+
+  tensorflow_serving:
+    build:
+      context: .
+      dockerfile: Dockerfile.tensorflow
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./mobilenet_v2:/models/mobilenet_v2

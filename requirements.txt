@@ -1,0 +1,6 @@
+fastapi==0.75.0
+uvicorn==0.17.0
+requests==2.26.0
+numpy>=1.19.2
+Pillow>=8.0.0
+python-multipart>=0.0.5

@@ -1,0 +1,7 @@
+FROM tensorflow/serving:latest
+
+# Copy the model to the appropriate directory
+COPY ./mobilenet_v2 /models/mobilenet_v2
+
+# Set the environment variable for the model
+ENV MODEL_NAME=mobilenet_v2
