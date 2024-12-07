@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   fastapi:
     build:
@@ -13,7 +13,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.tensorflow
-    ports:
-      - "8501:8501"
     volumes:
       - ./mobilenet_v2:/models/mobilenet_v2
